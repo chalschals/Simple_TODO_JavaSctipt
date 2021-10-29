@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #d19b68, #ac5711);
+  font-family: "poppins", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  border: none !important;
+  outline: none !important;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #fff;
+}
+form button {
+  cursor: pointer;
+  background: #a7530e;
+  color: #a7530e;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+form button:hover {
+  color: #fff;
+  background: #a7530e;
+}
+form input {
+  min-width: 20em;
+}
+.todo-container {
+  width: 100%;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-container ul {
+  min-width: 375px;
+}
+.todo-container ul .todo-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  color: #a7530e;
+  font-size: 1rem;
+  border-bottom: 1px solid #b466252e;
+  transition: all 0.5s ease;
+}
+.todo-container ul .todo-div .todo {
+  flex: 1;
+  color: #000;
+  list-style: none;
+  padding: 0px 10px;
+  /* font-weight: bold; */
+  transition: all 0.2s ease;
+}
+.todo-container ul .todo-div.fall {
+  opacity: 0;
+  transform: translateY(200px) rotateZ(20deg);
+}
+.todo-container ul .todo-div.completed {
+  opacity: 0.5;
+}
+.todo-container ul .todo-div.completed .todo {
+  text-decoration: line-through;
+}
+
+.todo-container ul .todo-div .todo-check,
+.todo-container ul .todo-div .todo-delete {
+  padding: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todo-container ul .todo-div .todo-delete:hover {
+  background: rgb(167, 14, 14);
+  color: #fff;
+}
+.todo-container ul .todo-div .todo-check:hover {
+  background: rgb(50, 167, 14);
+  color: #fff;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+.fas {
+  pointer-events: none;
+}
